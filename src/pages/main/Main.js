@@ -2,6 +2,7 @@ import { Box, Flex } from "@chakra-ui/react";
 import styled from "styled-components";
 import { IMG_URL } from "../../constants";
 import { Link } from "react-router-dom";
+import { PageTitle } from "../../components/PageTitle";
 
 const MainBox = styled.div`
   display: flex;
@@ -60,6 +61,7 @@ const BtnWrap = styled.button`
 export const Main = () => {
   return (
     <>
+      <PageTitle titleName="시작페이지" />
       <Box {...WrapSet}>
         <Flex
           maxW="480px"
