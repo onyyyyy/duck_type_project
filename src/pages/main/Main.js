@@ -59,7 +59,7 @@ const BtnWrap = styled.button`
 
 export const Main = () => {
   return (
-    <div>
+    <>
       <Box {...WrapSet}>
         <Flex
           maxW="480px"
@@ -81,6 +81,6 @@ export const Main = () => {
           </MainBox>
         </Flex>
       </Box>
-    </div>
+    </>
   );
 };
