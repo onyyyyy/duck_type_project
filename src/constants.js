@@ -1,1 +1,1 @@
-export const IMG_URL = "";
+export const IMG_URL = "https://cdn.discordapp.com/attachments";
