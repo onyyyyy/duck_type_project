@@ -83,8 +83,4 @@ export const questions = [
       { type: "J", text: "답변24" },
     ],
   },
-  {
-    q: ["문제가 끝이 났어요! 결과 확인하러 갈까요?"],
-    a: [{ type: "", text: "결과보러가기" }],
-  },
 ];

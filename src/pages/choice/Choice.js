@@ -2,9 +2,9 @@ import { Box, Flex } from "@chakra-ui/react";
 import styled from "styled-components";
 import { IMG_URL } from "../../constants";
 import { useState } from "react";
-import { Result } from "../result/Result";
 import { PageTitle } from "../../components/PageTitle";
 import { questions } from "../../components/questions";
+import { Loading } from "../../components/Loading";
 
 const MainBox = styled.div`
   display: flex;
@@ -146,7 +146,7 @@ export const Choice = () => {
           </Flex>
         </Box>
       ) : (
-        <Result />
+        <Loading />
       )}
     </>
   );
