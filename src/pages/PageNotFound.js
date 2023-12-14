@@ -1,3 +1,11 @@
+import { Box, Flex } from "@chakra-ui/react";
+
+const WrapSet = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+};
+
 export const PageNotFound = () => {
   return (
     <>
