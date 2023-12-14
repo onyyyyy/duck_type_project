@@ -2,9 +2,9 @@ import { Box, Flex } from "@chakra-ui/react";
 import styled from "styled-components";
 import { IMG_URL } from "../../constants";
 import { useState } from "react";
-import { Result } from "../result/Result";
 import { PageTitle } from "../../components/PageTitle";
 import { questions } from "../../components/questions";
+import { Loading } from "../../components/Loading";
 
 const MainBox = styled.div`
   display: flex;
@@ -12,14 +12,23 @@ const MainBox = styled.div`
   justify-content: center;
   align-items: center;
   max-width: 330px;
-
   font-weight: 600;
   font-size: 30px;
   line-height: 50px;
 `;
 
-const Gage = styled.div`
-  font-size: 18px;
+const GaugeBar = styled.div`
+  width: 90%;
+  height: 5px;
+  background-color: aquamarine;
+  border-radius: 10px;
+  overflow: hidden;
+`;
+
+const Gauge = styled.div`
+  width: ${(props) => props.$width}%;
+  height: 100%;
+  background-color: red;
 `;
 
 const Qwrap = styled.div`
@@ -27,8 +36,6 @@ const Qwrap = styled.div`
 `;
 
 const Question = styled.h3`
-  /* width: 90%;
-  width: 100%; */
   text-align: center;
 `;
 
@@ -89,7 +96,12 @@ export const Choice = () => {
     { name: "J", count: 0 },
   ]);
 
+  const [gauge, setGauge] = useState();
+
   const handleAnswer = (type, index) => {
+    const progress = (page / questions.length) * 100;
+    setGauge(progress);
+    // console.log(progress);
     let mbtiList = mbtiValue;
     for (let i = 0; i < mbtiList.length; i++) {
       if (mbtiList[i].name === type) {
@@ -102,9 +114,10 @@ export const Choice = () => {
     setPage(page + 1);
 
     if (index + 1 === questions.length) {
-      console.log("결과보기");
+      // console.log("결과보기");
     }
   };
+  // console.log(gauge);
   return (
     <>
       <PageTitle titleName="유형테스트 페이지" />
@@ -118,19 +131,25 @@ export const Choice = () => {
             direction="column"
             {...WrapSet}
           >
-            <Gage>{`${page}/${questions.length}`}</Gage>
+            <GaugeBar>
+              <Gauge $width={Math.round(gauge)}></Gauge>
+            </GaugeBar>
+
             {questions.map((data, index) => (
               <MainBox
                 key={index}
                 style={{ display: page === index + 1 ? "flex" : "none" }}
               >
-                {console.log(mbtiValue)}
+                {/* {console.log(mbtiValue)} */}
+
                 <Qwrap>
                   {data.q.map((qdata, qindex) => (
                     <Question key={qindex}>{qdata}</Question>
                   ))}
                 </Qwrap>
+
                 <DuckImg />
+
                 <Awrap>
                   {data.a.map((adata, aindex) => (
                     <Answer
@@ -146,7 +165,7 @@ export const Choice = () => {
           </Flex>
         </Box>
       ) : (
-        <Result />
+        <Loading />
       )}
     </>
   );
