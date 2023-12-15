@@ -60,7 +60,8 @@ const BtnWrap = styled.button`
   }
 `;
 
-export const Loading = () => {
+export const Loading = ({ mbtiValue }) => {
+  // console.log(mbtiValue);
   return (
     <>
       <Box {...WrapSet}>

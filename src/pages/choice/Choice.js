@@ -5,6 +5,7 @@ import { useState } from "react";
 import { PageTitle } from "../../components/PageTitle";
 import { questions } from "../../components/questions";
 import { Loading } from "../../components/Loading";
+import { mbtiName } from "../../components/mbtiName";
 
 const MainBox = styled.div`
   display: flex;
@@ -112,12 +113,12 @@ export const Choice = () => {
     setMbtiValue(mbtiList);
     // console.log(mbtiValue);
     setPage(page + 1);
-
-    if (index + 1 === questions.length) {
-      // console.log("결과보기");
-    }
   };
-  // console.log(gauge);
+
+  // const [mbtiDuck, setMbtiDuck] = useState([]);
+  // console.log(mbtiName);
+  // setMbtiDuck(mbtiName.filter((val) => val.mbti)[0]);
+
   return (
     <>
       <PageTitle titleName="유형테스트 페이지" />
@@ -165,7 +166,7 @@ export const Choice = () => {
           </Flex>
         </Box>
       ) : (
-        <Loading />
+        <Loading mbtiValue={mbtiValue} />
       )}
     </>
   );
