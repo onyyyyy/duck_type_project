@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { IMG_URL } from "../constants";
 import { Link } from "react-router-dom";
 import { SyncLoader } from "react-spinners";
+import { mbtiName } from "./mbtiName";
+import { useEffect, useState } from "react";
 
 const MainBox = styled.div`
   display: flex;
@@ -62,6 +64,56 @@ const BtnWrap = styled.button`
 
 export const Loading = ({ mbtiValue }) => {
   // console.log(mbtiValue);
+
+  let IorE =
+    mbtiValue.find(function (data) {
+      return data.name === "I";
+    }).count >
+    mbtiValue.find(function (data) {
+      return data.name === "E";
+    }).count
+      ? "I"
+      : "E";
+
+  let SorN =
+    mbtiValue.find(function (data) {
+      return data.name === "S";
+    }).count >
+    mbtiValue.find(function (data) {
+      return data.name === "N";
+    }).count
+      ? "S"
+      : "N";
+
+  let ForT =
+    mbtiValue.find(function (data) {
+      return data.name === "F";
+    }).count >
+    mbtiValue.find(function (data) {
+      return data.name === "T";
+    }).count
+      ? "F"
+      : "T";
+
+  let PorJ =
+    mbtiValue.find(function (data) {
+      return data.name === "P";
+    }).count >
+    mbtiValue.find(function (data) {
+      return data.name === "J";
+    }).count
+      ? "P"
+      : "J";
+
+  let mbti = IorE + SorN + ForT + PorJ;
+
+  const [mbtiDuck, setMbtiDuck] = useState([]);
+  useEffect(() => {
+    setMbtiDuck(mbtiName.filter((val) => val.mbti === mbti)[0]);
+  }, []);
+
+  console.log(mbtiDuck); //mbti 결과값(mbtiName에 있는 배열)
+
   return (
     <>
       <Box {...WrapSet}>

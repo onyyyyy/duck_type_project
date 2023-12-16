@@ -5,7 +5,6 @@ import { useState } from "react";
 import { PageTitle } from "../../components/PageTitle";
 import { questions } from "../../components/questions";
 import { Loading } from "../../components/Loading";
-import { mbtiName } from "../../components/mbtiName";
 
 const MainBox = styled.div`
   display: flex;
