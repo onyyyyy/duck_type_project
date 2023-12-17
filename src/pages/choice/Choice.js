@@ -99,9 +99,11 @@ export const Choice = () => {
   const [gauge, setGauge] = useState();
 
   const handleAnswer = (type, index) => {
-    const progress = (page / questions.length) * 100;
-    setGauge(progress);
+    const progress = ((page + 1) / questions.length) * 100;
     // console.log(progress);
+    setGauge(progress);
+    console.log(gauge);
+
     let mbtiList = mbtiValue;
     for (let i = 0; i < mbtiList.length; i++) {
       if (mbtiList[i].name === type) {
@@ -132,7 +134,7 @@ export const Choice = () => {
             {...WrapSet}
           >
             <GaugeBar>
-              <Gauge $width={Math.round(gauge)}></Gauge>
+              <Gauge $width={gauge}></Gauge>
             </GaugeBar>
 
             {questions.map((data, index) => (
