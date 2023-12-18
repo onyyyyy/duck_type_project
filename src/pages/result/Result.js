@@ -39,6 +39,7 @@ const BottomBtn = styled.button`
   justify-content: center;
   margin: 20px 0;
   box-shadow: 10px 10px 5px #674211;
+  cursor: pointer;
 
   a {
     color: #674211;
@@ -55,6 +56,11 @@ const ImgWrap = styled.div`
   max-width: 480px;
   width: 100%;
   height: 80%;
+  padding-top: 15px;
+
+  img {
+    width: 100%;
+  }
 `;
 
 const CloseBtn = styled.button`
@@ -70,6 +76,8 @@ const CloseBtn = styled.button`
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  margin-top: 20px;
+  cursor: pointer;
 `;
 
 export const Result = () => {
@@ -90,7 +98,7 @@ export const Result = () => {
     content: {
       backgroundColor: "#c89f68",
       width: "480px",
-      height: "600px",
+      height: "650px",
       margin: "auto",
       padding: "20px",
       fontSize: "30px",
@@ -100,10 +108,7 @@ export const Result = () => {
   };
 
   const mbtiDuck = useLocation();
-
   const mbtiResult = mbtiDuck.state.name;
-
-  console.log(mbtiResult);
 
   return (
     <>
@@ -128,7 +133,10 @@ export const Result = () => {
             >
               <h3>MBTI별 오리 모음집</h3>
               <ImgWrap>
-                <img src="" alt="" />
+                <img
+                  src="https://cdn.discordapp.com/attachments/1182224641134170152/1186364861702226100/mbti_duck_img.png"
+                  alt="mbti duck image"
+                />
               </ImgWrap>
               <CloseBtn onClick={closeModal}>닫기</CloseBtn>
             </Modal>

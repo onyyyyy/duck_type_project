@@ -6,5 +6,6 @@
 [x] 오리 모아보기 text 수정
 [x] 결과값 result 페이지로 이동
 [x] Loading에서 받아둔 mbtiDuck 값은 Result페이지로 이동 시에 Link로 이동하니 state 사용해서 Result 페이지로 값 옮겨준 이후에 뿌려주기
-[] 각 페이지 helmet 설정
-[] 오리모음 챠크라 button 사용해서 img 띄우기
+[x] 각 페이지 helmet 설정
+[x] 오리모음 챠크라 button 사용해서 img 띄우기=> react-modal로 대체되었음
+[] 오리모음 페이지 뜨는 것을 좀 더 부드럽게 처리할 수 있을지?
