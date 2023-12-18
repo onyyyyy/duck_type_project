@@ -14,7 +14,7 @@ const MainBox = styled.div`
   max-width: 330px;
   font-weight: 600;
   font-size: 30px;
-  line-height: 50px;
+  line-height: 30px;
 `;
 
 const GaugeBar = styled.div`
@@ -23,6 +23,7 @@ const GaugeBar = styled.div`
   background-color: aquamarine;
   border-radius: 10px;
   overflow: hidden;
+  margin-bottom: 30px;
 `;
 
 const Gauge = styled.div`
@@ -36,6 +37,7 @@ const Qwrap = styled.div`
 `;
 
 const Question = styled.h3`
+  font-size: 24px;
   text-align: center;
 `;
 
@@ -60,8 +62,8 @@ const Answer = styled.button`
   all: unset;
   width: 100%;
   height: 80px;
-  font-size: 30px;
-  font-weight: 900;
+  font-size: 20px;
+  font-weight: 600;
   background-color: #fff;
   text-align: center;
   transition: 0.5s;
@@ -74,7 +76,6 @@ const Answer = styled.button`
 
   a {
     color: #674211;
-    line-height: 50px;
   }
 
   &:hover {
@@ -102,7 +103,7 @@ export const Choice = () => {
     const progress = ((page + 1) / questions.length) * 100;
     // console.log(progress);
     setGauge(progress);
-    console.log(gauge);
+    // console.log(gauge);
 
     let mbtiList = mbtiValue;
     for (let i = 0; i < mbtiList.length; i++) {
@@ -112,7 +113,7 @@ export const Choice = () => {
     }
 
     setMbtiValue(mbtiList);
-    // console.log(mbtiValue);
+    console.log(mbtiValue);
     setPage(page + 1);
   };
 
