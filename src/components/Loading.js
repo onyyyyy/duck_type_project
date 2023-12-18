@@ -43,7 +43,7 @@ const DuckImg = styled.div`
 `;
 
 const BtnWrap = styled.button`
-  width: 80%;
+  width: 100%;
   border: none;
   border-radius: 20px;
   font-size: 30px;
@@ -55,6 +55,7 @@ const BtnWrap = styled.button`
   a {
     color: #674211;
     line-height: 70px;
+    width: 100%;
   }
 
   &:hover {
@@ -63,8 +64,6 @@ const BtnWrap = styled.button`
 `;
 
 export const Loading = ({ mbtiValue }) => {
-  // console.log(mbtiValue);
-
   let IorE =
     mbtiValue.find(function (data) {
       return data.name === "I";
@@ -138,7 +137,7 @@ export const Loading = ({ mbtiValue }) => {
 
             <BtnWrap>
               <Link to={"/result"} state={{ name: mbtiDuck }}>
-                당신의 오리는...
+                당신의 오리 보러가기
               </Link>
             </BtnWrap>
           </MainBox>

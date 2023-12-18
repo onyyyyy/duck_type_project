@@ -1,6 +1,5 @@
 import { Box, Flex } from "@chakra-ui/react";
 import { PageTitle } from "../../components/PageTitle";
-import { IMG_URL } from "../../constants";
 import styled from "styled-components";
 import { Link, useLocation } from "react-router-dom";
 
@@ -42,6 +41,7 @@ const BottomBtn = styled.button`
   a {
     color: #674211;
     line-height: 50px;
+    width: 100%;
   }
 
   &:hover {
@@ -60,10 +60,7 @@ export const Result = () => {
     <>
       <PageTitle titleName="결과페이지" />
       <DuckImg>
-        <img
-          src="https://cdn.discordapp.com/attachments/1182224641134170152/1184917586765434920/test_img.png"
-          alt="mbti오리"
-        />
+        <img src={mbtiResult.img} alt="mbti오리" />
       </DuckImg>
       <Box {...WrapSet}>
         <Flex
@@ -74,7 +71,7 @@ export const Result = () => {
           {...WrapSet}
         >
           <BottomWrap>
-            <BottomBtn>오리 모아보기</BottomBtn>
+            <BottomBtn>MBTI별 오리 모음집</BottomBtn>
             <BottomBtn>
               <Link to="/">테스트 다시하기</Link>
             </BottomBtn>
