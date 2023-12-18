@@ -112,7 +112,7 @@ export const Loading = ({ mbtiValue }) => {
     setMbtiDuck(mbtiName.filter((val) => val.mbti === mbti)[0]);
   }, []);
 
-  console.log(mbtiDuck); //mbti 결과값(mbtiName에 있는 배열)
+  // console.log(mbtiDuck); //mbti 결과값(mbtiName에 있는 배열)
 
   return (
     <>
@@ -137,7 +137,9 @@ export const Loading = ({ mbtiValue }) => {
             </LoadWrap>
 
             <BtnWrap>
-              <Link to={"/result"}>당신의 오리는...</Link>
+              <Link to={"/result"} state={{ name: mbtiDuck }}>
+                당신의 오리는...
+              </Link>
             </BtnWrap>
           </MainBox>
         </Flex>

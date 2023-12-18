@@ -2,7 +2,7 @@ import { Box, Flex } from "@chakra-ui/react";
 import { PageTitle } from "../../components/PageTitle";
 import { IMG_URL } from "../../constants";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const WrapSet = {
   display: "flex",
@@ -50,6 +50,12 @@ const BottomBtn = styled.button`
 `;
 
 export const Result = () => {
+  const mbtiDuck = useLocation();
+
+  const mbtiResult = mbtiDuck.state.name;
+
+  console.log(mbtiResult);
+
   return (
     <>
       <PageTitle titleName="결과페이지" />

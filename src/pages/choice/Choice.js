@@ -101,9 +101,7 @@ export const Choice = () => {
 
   const handleAnswer = (type, index) => {
     const progress = ((page + 1) / questions.length) * 100;
-    // console.log(progress);
     setGauge(progress);
-    // console.log(gauge);
 
     let mbtiList = mbtiValue;
     for (let i = 0; i < mbtiList.length; i++) {
@@ -113,13 +111,9 @@ export const Choice = () => {
     }
 
     setMbtiValue(mbtiList);
-    console.log(mbtiValue);
+    // console.log(mbtiValue);
     setPage(page + 1);
   };
-
-  // const [mbtiDuck, setMbtiDuck] = useState([]);
-  // console.log(mbtiName);
-  // setMbtiDuck(mbtiName.filter((val) => val.mbti)[0]);
 
   return (
     <>
