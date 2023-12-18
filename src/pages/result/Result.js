@@ -2,6 +2,8 @@ import { Box, Flex } from "@chakra-ui/react";
 import { PageTitle } from "../../components/PageTitle";
 import styled from "styled-components";
 import { Link, useLocation } from "react-router-dom";
+import { useState } from "react";
+import Modal from "react-modal";
 
 const WrapSet = {
   display: "flex",
@@ -49,7 +51,54 @@ const BottomBtn = styled.button`
   }
 `;
 
+const ImgWrap = styled.div`
+  max-width: 480px;
+  width: 100%;
+  height: 80%;
+`;
+
+const CloseBtn = styled.button`
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #fff;
+  font-size: 20px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+`;
+
 export const Result = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openModal = () => {
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+  };
+
+  const modalStyles = {
+    overlay: {
+      backgroundColor: "rgba(0,0,0,0.5)",
+    },
+    content: {
+      backgroundColor: "#c89f68",
+      width: "480px",
+      height: "600px",
+      margin: "auto",
+      padding: "20px",
+      fontSize: "30px",
+      fontWeight: "600",
+      border: "none",
+    },
+  };
+
   const mbtiDuck = useLocation();
 
   const mbtiResult = mbtiDuck.state.name;
@@ -71,7 +120,18 @@ export const Result = () => {
           {...WrapSet}
         >
           <BottomWrap>
-            <BottomBtn>MBTI별 오리 모음집</BottomBtn>
+            <BottomBtn onClick={openModal}>MBTI별 오리 모음집</BottomBtn>
+            <Modal
+              isOpen={isOpen}
+              onRequestClose={closeModal}
+              style={modalStyles}
+            >
+              <h3>MBTI별 오리 모음집</h3>
+              <ImgWrap>
+                <img src="" alt="" />
+              </ImgWrap>
+              <CloseBtn onClick={closeModal}>닫기</CloseBtn>
+            </Modal>
             <BottomBtn>
               <Link to="/">테스트 다시하기</Link>
             </BottomBtn>
