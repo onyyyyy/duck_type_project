@@ -109,7 +109,7 @@ export const Loading = ({ mbtiValue }) => {
   const [mbtiDuck, setMbtiDuck] = useState([]);
   useEffect(() => {
     setMbtiDuck(mbtiName.filter((val) => val.mbti === mbti)[0]);
-  }, []);
+  }, [mbti]);
 
   // console.log(mbtiDuck); //mbti 결과값(mbtiName에 있는 배열)
 

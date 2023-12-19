@@ -29,7 +29,7 @@ const GaugeBar = styled.div`
 const Gauge = styled.div`
   width: ${(props) => props.$width}%;
   height: 100%;
-  background-color: red;
+  background-color: #ffe800;
 `;
 
 const Qwrap = styled.div`
@@ -37,7 +37,8 @@ const Qwrap = styled.div`
 `;
 
 const Question = styled.h3`
-  font-size: 24px;
+  width: 100%;
+  font-size: 22px;
   text-align: center;
 `;
 
@@ -60,8 +61,8 @@ const Awrap = styled.div`
 
 const Answer = styled.button`
   all: unset;
+  padding: 16px;
   width: 100%;
-  height: 80px;
   font-size: 20px;
   font-weight: 600;
   background-color: #fff;
@@ -99,7 +100,7 @@ export const Choice = () => {
 
   const [gauge, setGauge] = useState();
 
-  const handleAnswer = (type, index) => {
+  const handleAnswer = (type) => {
     const progress = ((page + 1) / questions.length) * 100;
     setGauge(progress);
 
