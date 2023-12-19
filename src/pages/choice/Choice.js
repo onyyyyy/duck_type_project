@@ -1,6 +1,5 @@
 import { Box, Flex } from "@chakra-ui/react";
 import styled from "styled-components";
-import { IMG_URL } from "../../constants";
 import { useEffect, useState } from "react";
 import { PageTitle } from "../../components/PageTitle";
 import { questions } from "../../components/questions";
@@ -46,11 +45,12 @@ const Question = styled.h3`
   text-align: center;
 `;
 
+const Iwrap = styled.div``;
+
 const DuckImg = styled.div`
   width: 300px;
   height: 300px;
-  background: url(${IMG_URL}/1182224641134170152/1184389739822989352/duck_img_1.png)
-    no-repeat center / cover;
+  background: url(${(props) => props.$qduck}) no-repeat center / cover;
 `;
 
 const WrapSet = {
@@ -158,7 +158,11 @@ export const Choice = () => {
                   ))}
                 </Qwrap>
 
-                <DuckImg />
+                <Iwrap>
+                  {data.img.map((idata, iindex) => (
+                    <DuckImg key={iindex} $qduck={idata}></DuckImg>
+                  ))}
+                </Iwrap>
 
                 <Awrap>
                   {data.a.map((adata, aindex) => (

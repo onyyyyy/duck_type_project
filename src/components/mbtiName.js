@@ -55,7 +55,7 @@ export let mbtiName = [
   },
   {
     mbti: "ISFP",
-    img: `${IMG_URL}/1182224641134170152/1186266214880784464/ISFP.png`,
+    img: `${IMG_URL}/1182224641134170152/1186721941013418084/ISFP.png`,
   },
   {
     mbti: "ESTP",

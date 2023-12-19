@@ -44,6 +44,15 @@ const BottomWrap = styled.div`
   width: 80%;
 `;
 
+const DownText = styled.h6`
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  color: #555;
+  line-height: 20px;
+  margin-top: 10px;
+`;
+
 const BottomBtn = styled.button`
   all: unset;
   width: 100%;
@@ -94,6 +103,7 @@ export const Result = () => {
           {...WrapSet}
         >
           <BottomWrap>
+            <DownText>결과 이미지를 꾹 눌러 저장!</DownText>
             <BottomBtn onClick={onOpen}>MBTI별 오리 모음집</BottomBtn>
             <ChakraProvider>
               <Modal isOpen={isOpen} onClose={onClose}>
