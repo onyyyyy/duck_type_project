@@ -1,9 +1,20 @@
-import { Box, Flex } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  ChakraProvider,
+  Flex,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
+  useDisclosure,
+} from "@chakra-ui/react";
 import { PageTitle } from "../../components/PageTitle";
 import styled from "styled-components";
 import { Link, useLocation } from "react-router-dom";
-import { useState } from "react";
-import Modal from "react-modal";
 
 const WrapSet = {
   display: "flex",
@@ -17,6 +28,15 @@ const DuckImg = styled.div`
   align-items: center;
   img {
     max-width: 480px;
+    width: 100%;
+  }
+`;
+
+const MbtiDuckImg = styled.div`
+  max-width: 450px;
+  width: 100%;
+  img {
+    width: 100%;
   }
 `;
 
@@ -52,60 +72,8 @@ const BottomBtn = styled.button`
   }
 `;
 
-const ImgWrap = styled.div`
-  max-width: 480px;
-  width: 100%;
-  height: 80%;
-  padding-top: 15px;
-
-  img {
-    width: 100%;
-  }
-`;
-
-const CloseBtn = styled.button`
-  all: unset;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 50px;
-  border-radius: 10px;
-  background-color: #fff;
-  font-size: 20px;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 20px;
-  cursor: pointer;
-`;
-
 export const Result = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const openModal = () => {
-    setIsOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsOpen(false);
-  };
-
-  const modalStyles = {
-    overlay: {
-      backgroundColor: "rgba(0,0,0,0.5)",
-    },
-    content: {
-      backgroundColor: "#c89f68",
-      width: "480px",
-      height: "650px",
-      margin: "auto",
-      padding: "20px",
-      fontSize: "30px",
-      fontWeight: "600",
-      border: "none",
-    },
-  };
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const mbtiDuck = useLocation();
   const mbtiResult = mbtiDuck.state.name;
@@ -125,21 +93,28 @@ export const Result = () => {
           {...WrapSet}
         >
           <BottomWrap>
-            <BottomBtn onClick={openModal}>MBTI별 오리 모음집</BottomBtn>
-            <Modal
-              isOpen={isOpen}
-              onRequestClose={closeModal}
-              style={modalStyles}
-            >
-              <h3>MBTI별 오리 모음집</h3>
-              <ImgWrap>
-                <img
-                  src="https://cdn.discordapp.com/attachments/1182224641134170152/1186364861702226100/mbti_duck_img.png"
-                  alt="mbti duck image"
-                />
-              </ImgWrap>
-              <CloseBtn onClick={closeModal}>닫기</CloseBtn>
-            </Modal>
+            <BottomBtn onClick={onOpen}>MBTI별 오리 모음집</BottomBtn>
+            <ChakraProvider>
+              <Modal isOpen={isOpen} onClose={onClose}>
+                <ModalOverlay />
+                <ModalContent bgColor="#c89f68">
+                  <ModalHeader>MBTI별 오리 모음집</ModalHeader>
+                  <ModalCloseButton />
+                  <ModalBody>
+                    <MbtiDuckImg>
+                      <img
+                        src="https://cdn.discordapp.com/attachments/1182224641134170152/1186364861702226100/mbti_duck_img.png"
+                        alt="mbti별 오리"
+                      />
+                    </MbtiDuckImg>
+                  </ModalBody>
+                  <ModalFooter>
+                    <Button onClick={onClose}>닫기</Button>
+                  </ModalFooter>
+                </ModalContent>
+              </Modal>
+            </ChakraProvider>
+
             <BottomBtn>
               <Link to="/">테스트 다시하기</Link>
             </BottomBtn>
