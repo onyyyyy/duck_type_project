@@ -20,7 +20,7 @@ const MainBox = styled.div`
 const GaugeBar = styled.div`
   width: 90%;
   height: 5px;
-  background-color: aquamarine;
+  background-color: white;
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 30px;
