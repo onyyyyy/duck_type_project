@@ -43,10 +43,11 @@ const BtnWrap = styled.button`
   border: none;
   font-size: 30px;
   font-weight: 900;
-  background-color: #fff;
+  background-color: #ffe800;
   text-align: center;
   margin: 40px auto;
   transition: 0.5s;
+  border-radius: 30px;
 
   a {
     color: #674211;
@@ -67,7 +68,7 @@ export const Main = () => {
           maxW="480px"
           w="100%"
           h="100vh"
-          bgColor="#c89f68"
+          bgColor="#fff"
           direction="column"
           {...WrapSet}
         >

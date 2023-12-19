@@ -45,10 +45,10 @@ const DuckImg = styled.div`
 const BtnWrap = styled.button`
   width: 100%;
   border: none;
-  border-radius: 20px;
+  border-radius: 40px;
   font-size: 30px;
   font-weight: 900;
-  background-color: #fff;
+  background-color: #ffe800;
   text-align: center;
   transition: 0.5s;
 
@@ -120,7 +120,7 @@ export const Loading = ({ mbtiValue }) => {
           maxW="480px"
           w="100%"
           h="100vh"
-          bgColor="#c89f68"
+          bgColor="#fff"
           direction="column"
           {...WrapSet}
         >

@@ -3,6 +3,7 @@ import { Main } from "./pages/main/Main";
 import { Choice } from "./pages/choice/Choice";
 import { Result } from "./pages/result/Result";
 import { PageNotFound } from "./pages/PageNotFound";
+import { Footer } from "./components/Footer";
 
 const Router = () => {
   return (
@@ -13,6 +14,7 @@ const Router = () => {
         <Route path="/result" element={<Result />} />
         <Route path="/*" element={<PageNotFound />} />
       </Routes>
+      <Footer />
     </HashRouter>
   );
 };

@@ -1,7 +1,7 @@
 import { Box, Flex } from "@chakra-ui/react";
 import styled from "styled-components";
 import { IMG_URL } from "../../constants";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { PageTitle } from "../../components/PageTitle";
 import { questions } from "../../components/questions";
 import { Loading } from "../../components/Loading";
@@ -31,7 +31,11 @@ const Gauge = styled.div`
   height: 100%;
   background-color: #ffe800;
 `;
-
+const GaugeNum = styled.h3`
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 20px;
+`;
 const Qwrap = styled.div`
   width: 100%;
 `;
@@ -65,7 +69,7 @@ const Answer = styled.button`
   width: 100%;
   font-size: 20px;
   font-weight: 600;
-  background-color: #fff;
+  background-color: #ffe800;
   text-align: center;
   transition: 0.5s;
   box-sizing: border-box;
@@ -73,7 +77,8 @@ const Answer = styled.button`
   align-items: center;
   justify-content: center;
   margin: 20px 0;
-  box-shadow: 10px 10px 5px #674211;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
 
   a {
     color: #674211;
@@ -100,9 +105,15 @@ export const Choice = () => {
 
   const [gauge, setGauge] = useState();
 
+  useEffect(() => {
+    const progress = (page / questions.length) * 100;
+    setGauge(progress);
+    // console.log(progress);
+  }, [page]);
   const handleAnswer = (type) => {
     const progress = ((page + 1) / questions.length) * 100;
     setGauge(progress);
+    // console.log(progress);
 
     let mbtiList = mbtiValue;
     for (let i = 0; i < mbtiList.length; i++) {
@@ -125,13 +136,14 @@ export const Choice = () => {
             maxW="480px"
             w="100%"
             h="100vh"
-            bgColor="#c89f68"
+            bgColor="#fff"
             direction="column"
             {...WrapSet}
           >
             <GaugeBar>
               <Gauge $width={gauge}></Gauge>
             </GaugeBar>
+            <GaugeNum>{`${page} / ${questions.length}`}</GaugeNum>
 
             {questions.map((data, index) => (
               <MainBox

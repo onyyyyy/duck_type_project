@@ -48,9 +48,10 @@ const BottomBtn = styled.button`
   all: unset;
   width: 100%;
   height: 80px;
+  border-radius: 40px;
   font-size: 30px;
   font-weight: 900;
-  background-color: #fff;
+  background-color: #ffe800;
   text-align: center;
   transition: 0.5s;
   box-sizing: border-box;
@@ -58,7 +59,7 @@ const BottomBtn = styled.button`
   align-items: center;
   justify-content: center;
   margin: 20px 0;
-  box-shadow: 10px 10px 5px #674211;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 
   a {
@@ -88,7 +89,7 @@ export const Result = () => {
         <Flex
           maxW="480px"
           w="100%"
-          bgColor="#c89f68"
+          bgColor="#fff"
           direction="column"
           {...WrapSet}
         >
