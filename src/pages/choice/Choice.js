@@ -28,7 +28,7 @@ const GaugeBar = styled.div`
 const Gauge = styled.div`
   width: ${(props) => props.$width}%;
   height: 100%;
-  background-color: #ffe800;
+  background-color: #ffd800;
 `;
 const GaugeNum = styled.h3`
   color: #333;
@@ -69,7 +69,7 @@ const Answer = styled.button`
   width: 100%;
   font-size: 20px;
   font-weight: 600;
-  background-color: #ffe800;
+  background-color: #ffd800;
   text-align: center;
   transition: 0.5s;
   box-sizing: border-box;
@@ -77,15 +77,16 @@ const Answer = styled.button`
   align-items: center;
   justify-content: center;
   margin: 20px 0;
-  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.06);
   border-radius: 30px;
+  cursor: pointer;
 
   a {
-    color: #674211;
+    color: #333;
   }
 
   &:hover {
-    background: #ffebd1;
+    opacity: 0.7;
   }
 `;
 

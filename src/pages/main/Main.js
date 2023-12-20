@@ -39,23 +39,24 @@ const WrapSet = {
 };
 
 const BtnWrap = styled.button`
+  padding: 5px;
   width: 80%;
   border: none;
-  font-size: 30px;
-  font-weight: 900;
-  background-color: #ffe800;
+  font-size: 26px;
+  font-weight: 800;
+  background-color: #ffd800;
   text-align: center;
   margin: 40px auto;
   transition: 0.5s;
   border-radius: 30px;
 
   a {
-    color: #674211;
+    color: #333;
     line-height: 50px;
   }
 
   &:hover {
-    background: #ffebd1;
+    opacity: 0.7;
   }
 `;
 

@@ -47,19 +47,20 @@ const BtnWrap = styled.button`
   border: none;
   border-radius: 40px;
   font-size: 30px;
-  font-weight: 900;
-  background-color: #ffe800;
+  font-weight: 700;
+  background-color: #ffd800;
   text-align: center;
   transition: 0.5s;
+  font-family: "Noto Sans KR", sans-serif;
 
   a {
-    color: #674211;
+    color: #333;
     line-height: 70px;
     width: 100%;
   }
 
   &:hover {
-    background: #ffebd1;
+    opacity: 0.7;
   }
 `;
 

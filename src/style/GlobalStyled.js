@@ -17,6 +17,7 @@ export const GlobalStyled = createGlobalStyle`
     }
 
     a{
+        font-family: "Noto Sans KR", sans-serif;
         text-decoration: none;
         display: block;
         color: #1d1d1d;

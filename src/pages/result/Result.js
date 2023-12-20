@@ -16,6 +16,10 @@ import { PageTitle } from "../../components/PageTitle";
 import styled from "styled-components";
 import { Link, useLocation } from "react-router-dom";
 
+const Rwrap = styled.div`
+  background-color: #f1f1f1;
+  font-family: "Noto Sans KR", sans-serif;
+`;
 const WrapSet = {
   display: "flex",
   alignItems: "center",
@@ -42,15 +46,16 @@ const MbtiDuckImg = styled.div`
 
 const BottomWrap = styled.div`
   width: 80%;
+  margin-bottom: 150px;
 `;
 
-const DownText = styled.h6`
-  font-size: 14px;
-  font-weight: 600;
+const DownText = styled.h4`
+  font-size: 18px;
+  font-weight: 700;
   text-align: center;
-  color: #555;
-  line-height: 20px;
+  color: #333;
   margin-top: 10px;
+  text-decoration: underline;
 `;
 
 const BottomBtn = styled.button`
@@ -58,9 +63,9 @@ const BottomBtn = styled.button`
   width: 100%;
   height: 80px;
   border-radius: 40px;
-  font-size: 30px;
-  font-weight: 900;
-  background-color: #ffe800;
+  font-size: 24px;
+  font-weight: 800;
+  background-color: #ffd800;
   text-align: center;
   transition: 0.5s;
   box-sizing: border-box;
@@ -68,17 +73,21 @@ const BottomBtn = styled.button`
   align-items: center;
   justify-content: center;
   margin: 20px 0;
-  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.06);
   cursor: pointer;
 
+  &:nth-child(3) {
+    background-color: transparent;
+    border: 2px solid #ffd800;
+  }
+
   a {
-    color: #674211;
-    line-height: 50px;
+    color: #333;
     width: 100%;
   }
 
   &:hover {
-    background: #ffebd1;
+    opacity: 0.6;
   }
 `;
 
@@ -89,7 +98,7 @@ export const Result = () => {
   const mbtiResult = mbtiDuck.state.name;
 
   return (
-    <>
+    <Rwrap>
       <PageTitle titleName="결과페이지" />
       <DuckImg>
         <img src={mbtiResult.img} alt="mbti오리" />
@@ -104,6 +113,9 @@ export const Result = () => {
         >
           <BottomWrap>
             <DownText>결과 이미지를 꾹 눌러 저장!</DownText>
+            <BottomBtn>
+              <Link to="/">테스트 다시하기</Link>
+            </BottomBtn>
             <BottomBtn onClick={onOpen}>MBTI별 오리 모음집</BottomBtn>
             <ChakraProvider>
               <Modal isOpen={isOpen} onClose={onClose}>
@@ -125,13 +137,9 @@ export const Result = () => {
                 </ModalContent>
               </Modal>
             </ChakraProvider>
-
-            <BottomBtn>
-              <Link to="/">테스트 다시하기</Link>
-            </BottomBtn>
           </BottomWrap>
         </Flex>
       </Box>
-    </>
+    </Rwrap>
   );
 };

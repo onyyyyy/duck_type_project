@@ -1,8 +1,12 @@
 import styled from "styled-components";
 
+const Wrap = styled.div`
+  background-color: #f1f1f1;
+`;
 const Container = styled.footer`
   max-width: 480px;
   width: 100%;
+  height: 100px;
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -22,8 +26,10 @@ const Copy = styled.h3`
 
 export const Footer = () => {
   return (
-    <Container>
-      <Copy>&copy; 2023 kimLrLr onyyyyy</Copy>
-    </Container>
+    <Wrap>
+      <Container>
+        <Copy>&copy; 2023 kimLrLr onyyyyy</Copy>
+      </Container>
+    </Wrap>
   );
 };
