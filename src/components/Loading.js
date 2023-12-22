@@ -43,10 +43,11 @@ const DuckImg = styled.div`
 `;
 
 const BtnWrap = styled.button`
-  width: 100%;
+  width: 80%;
+  padding: 14px;
   border: none;
   border-radius: 40px;
-  font-size: 30px;
+  font-size: 22px;
   font-weight: 700;
   background-color: #ffd800;
   text-align: center;
@@ -55,7 +56,6 @@ const BtnWrap = styled.button`
 
   a {
     color: #333;
-    line-height: 70px;
     width: 100%;
   }
 

@@ -61,9 +61,9 @@ const DownText = styled.h4`
 const BottomBtn = styled.button`
   all: unset;
   width: 100%;
-  height: 80px;
+  padding: 12px;
   border-radius: 40px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 800;
   background-color: #ffd800;
   text-align: center;

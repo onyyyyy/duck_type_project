@@ -65,7 +65,7 @@ const Awrap = styled.div`
 
 const Answer = styled.button`
   all: unset;
-  padding: 16px;
+  padding: 14px;
   width: 100%;
   font-size: 20px;
   font-weight: 600;

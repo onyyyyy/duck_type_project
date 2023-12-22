@@ -42,7 +42,7 @@ const BtnWrap = styled.button`
   padding: 5px;
   width: 80%;
   border: none;
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 800;
   background-color: #ffd800;
   text-align: center;
