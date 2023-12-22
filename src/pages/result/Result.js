@@ -54,7 +54,7 @@ const DownText = styled.h4`
   font-weight: 700;
   text-align: center;
   color: #333;
-  margin-top: 10px;
+  margin: 20px 0px 10px 0;
   text-decoration: underline;
 `;
 
