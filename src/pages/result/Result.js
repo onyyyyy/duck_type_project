@@ -65,8 +65,8 @@ const BottomBtn = styled.button`
   border-radius: 40px;
   font-size: 20px;
   font-weight: 800;
-  background-color: #ffd800;
   text-align: center;
+  background-color: #ffd800;
   transition: 0.5s;
   box-sizing: border-box;
   display: flex;
@@ -90,6 +90,12 @@ const BottomBtn = styled.button`
     opacity: 0.6;
   }
 `;
+
+const PopClose = {
+  bgColor: "#ffd800",
+
+  _hover: { opacity: "0.6" },
+};
 
 export const Result = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -120,7 +126,7 @@ export const Result = () => {
             <ChakraProvider>
               <Modal isOpen={isOpen} onClose={onClose}>
                 <ModalOverlay />
-                <ModalContent bgColor="#c89f68">
+                <ModalContent bgColor="#f1f1f1">
                   <ModalHeader>MBTI별 오리 모음집</ModalHeader>
                   <ModalCloseButton />
                   <ModalBody>
@@ -132,7 +138,9 @@ export const Result = () => {
                     </MbtiDuckImg>
                   </ModalBody>
                   <ModalFooter>
-                    <Button onClick={onClose}>닫기</Button>
+                    <Button onClick={onClose} {...PopClose}>
+                      닫기
+                    </Button>
                   </ModalFooter>
                 </ModalContent>
               </Modal>
