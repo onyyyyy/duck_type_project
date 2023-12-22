@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/duck_type_project/static/js/main.f8b0b0d3.js",
+    "index.html": "/duck_type_project/index.html",
+    "main.f8b0b0d3.js.map": "/duck_type_project/static/js/main.f8b0b0d3.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.f8b0b0d3.js"
+  ]
+}
