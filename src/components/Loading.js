@@ -28,6 +28,13 @@ const LoadWrap = styled.div`
   margin: 20% 0;
 `;
 
+const TxtBox = styled.div`
+  font-size: 14px;
+  font-weight: 500;
+  color: #808080;
+  margin-bottom: 10px;
+`;
+
 const WrapSet = {
   display: "flex",
   alignItems: "center",
@@ -136,9 +143,10 @@ export const Loading = ({ mbtiValue }) => {
               <SyncLoader color="#fffc00" size={30} margin={13} />
             </LoadWrap>
 
+            <TxtBox>눌러서 결과보기 &darr;</TxtBox>
             <BtnWrap>
               <Link to={"/result"} state={{ name: mbtiDuck }}>
-                당신의 오리 보러가기
+                당신의 오리는...?
               </Link>
             </BtnWrap>
           </MainBox>
