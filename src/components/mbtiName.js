@@ -27,7 +27,7 @@ export let mbtiName = [
   },
   {
     mbti: "ENTJ",
-    img: `${IMG_URL}/1182224641134170152/1189069570997243975/ENTJ_.png`,
+    img: `${IMG_URL}/1182224641134170152/1189111975196758066/ENTJ_1.png`,
   },
   {
     mbti: "ENTP",
