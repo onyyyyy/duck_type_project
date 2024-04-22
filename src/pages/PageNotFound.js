@@ -27,13 +27,13 @@ const BtnWrap = styled.button`
   border: none;
   border-radius: 20px;
   font-size: 30px;
-  font-weight: 900;
+  font-weight: 700;
   background-color: #fff;
   text-align: center;
   transition: 0.5s;
 
   a {
-    color: #674211;
+    color: #1d1d1d;
     line-height: 50px;
   }
 
@@ -48,8 +48,8 @@ export const PageNotFound = () => {
         <Flex
           maxW="480px"
           w="100%"
-          h="100vh"
-          bgColor="#c89f68"
+          h="90vh"
+          bgColor="#fff"
           direction="column"
           {...WrapSet}
         >

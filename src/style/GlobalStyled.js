@@ -29,7 +29,7 @@ export const GlobalStyled = createGlobalStyle`
 
     body{
         letter-spacing: -1px;
-        word-break: break-all;
+        word-break: keep-all;
         font-family: "Noto Sans KR", sans-serif;
         background-color: #f1f1f1;
     }
