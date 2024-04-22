@@ -1,4 +1,4 @@
-import { IMG_URL } from "../constants";
+import { IMG_URL, QUE_URL } from "../constants";
 
 export const questions = [
   {
@@ -7,7 +7,7 @@ export const questions = [
       { type: "I", text: "집에 콕 틀어박혀 못했던 취미 활동" },
       { type: "E", text: "못 만났던 친구들과 만나서 놀기" },
     ],
-    img: [`${IMG_URL}/1182224641134170152/1186585038821797929/duck_img_q1.png`],
+    img: [`${IMG_URL}${QUE_URL}/duck_img_q1.png`],
   },
   {
     q: ["쉬려고 했는데 오늘 날씨가 너무 좋아서 외출을 나가야만 할 것 같아!"],
@@ -15,7 +15,7 @@ export const questions = [
       { type: "P", text: "날이 좋으니 일단 나가서 생각해보자!" },
       { type: "J", text: "갈 곳 찾아보고 동선을 짜서 나가자!" },
     ],
-    img: [`${IMG_URL}/1182224641134170152/1184389739822989352/duck_img_1.png`],
+    img: [`${IMG_URL}${QUE_URL}/duck_img_1.png`],
   },
   {
     q: [
@@ -31,7 +31,7 @@ export const questions = [
         text: '"어떤 상황때문에 조금 늦을 것 같아, 먼저 들어가 있어" 상황 설명 먼저',
       },
     ],
-    img: [`${IMG_URL}/1182224641134170152/1186588968704282654/duck_img_q3.png`],
+    img: [`${IMG_URL}${QUE_URL}/duck_img_q3.png`],
   },
   {
     q: [
@@ -41,7 +41,7 @@ export const questions = [
       { type: "F", text: '"어떡해ㅠㅠ 많이 아파? 힘들진않아?"' },
       { type: "T", text: '"어디가 어떻게 안좋아? 병원은?"' },
     ],
-    img: [`${IMG_URL}/1182224641134170152/1186706496403288084/duck_img_q4.png`],
+    img: [`${IMG_URL}${QUE_URL}/duck_img_q4.png`],
   },
   {
     q: ["옆동네 사는 친구를 만난 나, 다른 친구를 소개 시켜주겠다고 하는데.."],
@@ -52,7 +52,7 @@ export const questions = [
         text: "'좋아 좋아 완전좋아~' 친구의 친구도 내 친구! 만나서 재밌게 논다.",
       },
     ],
-    img: [`${IMG_URL}/1182224641134170152/1186706509611159602/duck_img_q5.png`],
+    img: [`${IMG_URL}${QUE_URL}/duck_img_q5.png`],
   },
   {
     q: ["친구들과 길을 가던 중 모르는 길이 나왔다. 이때 나는"],
@@ -66,7 +66,7 @@ export const questions = [
         text: "지도에 위치를 검색해 본 후, 한번 훑고 감으로 길을 찾아가본다",
       },
     ],
-    img: [`${IMG_URL}/1182224641134170152/1186707955207376896/duck_img_q6.png`],
+    img: [`${IMG_URL}${QUE_URL}/duck_img_q6.png`],
   },
   {
     q: ["간만에 보러간 스릴러 영화, 영화를 보고 난 후 나는"],
@@ -77,7 +77,7 @@ export const questions = [
         text: "'내가 만약 그런 상황이었다면..?', '아까 그 부분은 어떻게 촬영했을까?'",
       },
     ],
-    img: [`${IMG_URL}/1182224641134170152/1186709911552405545/duck_img_q7.png`],
+    img: [`${IMG_URL}${QUE_URL}/duck_img_q7.png`],
   },
 
   {
@@ -86,7 +86,7 @@ export const questions = [
       { type: "S", text: "정확히 계량해 레시피 대로 착착 요리를 한다." },
       { type: "N", text: "레시피는 참고용이다. 나는 나의 손을 믿고 계량한다." },
     ],
-    img: [`${IMG_URL}/1182224641134170152/1186714667926687744/duck_img_q8.png`],
+    img: [`${IMG_URL}${QUE_URL}/duck_img_q8.png`],
   },
 
   {
@@ -101,7 +101,7 @@ export const questions = [
         text: "'진짜? 왜? 웃기네' 잘 모르면서 욕하는 게 어이가 없지만 욕하고 만다.",
       },
     ],
-    img: [`${IMG_URL}/1182224641134170152/1186715386943635486/duck_img_q9.png`],
+    img: [`${IMG_URL}${QUE_URL}/duck_img_q9.png`],
   },
   {
     q: ["친구들과 여행을 가기로 한 나! 전 날 내가 해야 할 일은?"],
@@ -115,9 +115,7 @@ export const questions = [
         text: "친구들과의 여행에서 무엇을 할 지 세부적인 계획을 세워본다",
       },
     ],
-    img: [
-      `${IMG_URL}/1182224641134170152/1186717184475541524/duck_img_q10.png`,
-    ],
+    img: [`${IMG_URL}${QUE_URL}/duck_img_q10.png`],
   },
   {
     q: ["친구들과의 여행 후, 아무도 없는 집에 들어 온 나,"],
@@ -131,9 +129,7 @@ export const questions = [
         text: "'친구들이랑 있을 때 행복하고 즐거웠는데..' 집에 오니 뭔가 텅 빈 것 같이 쓸쓸하다.",
       },
     ],
-    img: [
-      `${IMG_URL}/1182224641134170152/1186718886914183178/duck_img_q11.png`,
-    ],
+    img: [`${IMG_URL}${QUE_URL}/duck_img_q11.png`],
   },
   {
     q: ["여행 다녀온 후, 캐리어 정리는"],
@@ -141,8 +137,6 @@ export const questions = [
       { type: "P", text: "정리..? 해야지.. 일단 누워 볼까..?" },
       { type: "J", text: "바로바로 해야지, 원래 위치로~" },
     ],
-    img: [
-      `${IMG_URL}/1182224641134170152/1186720708533944340/duck_img_q12.png`,
-    ],
+    img: [`${IMG_URL}${QUE_URL}/duck_img_q12.png`],
   },
 ];

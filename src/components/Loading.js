@@ -45,8 +45,7 @@ const DuckImg = styled.div`
   width: 85px;
   height: 85px;
   margin-right: 20px;
-  background: url(${IMG_URL}/1182224641134170152/1184766349126418484/load_img.png)
-    no-repeat center / contain;
+  background: url(${IMG_URL}/img/load_img.png) no-repeat center / contain;
 `;
 
 const BtnWrap = styled.button`

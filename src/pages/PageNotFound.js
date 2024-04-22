@@ -19,8 +19,7 @@ const WrapSet = {
 const DuckImg = styled.div`
   width: 300px;
   height: 300px;
-  background: url(${IMG_URL}/1182224641134170152/1184412008641204276/404.png)
-    no-repeat center / contain;
+  background: url(${IMG_URL}/img/404.png) no-repeat center / contain;
 `;
 
 const BtnWrap = styled.button`

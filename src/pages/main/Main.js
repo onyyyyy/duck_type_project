@@ -28,8 +28,7 @@ const MainBox = styled.div`
 const DuckImg = styled.div`
   width: 300px;
   height: 300px;
-  background: url(${IMG_URL}/1182224641134170152/1184107717732872263/500w_main_duck.png)
-    no-repeat center / contain;
+  background: url(${IMG_URL}/img/500w_main_duck.png) no-repeat center / contain;
 `;
 
 const WrapSet = {

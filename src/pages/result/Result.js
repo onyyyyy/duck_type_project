@@ -15,6 +15,7 @@ import {
 import { PageTitle } from "../../components/PageTitle";
 import styled from "styled-components";
 import { Link, useLocation } from "react-router-dom";
+import { IMG_URL } from "../../constants";
 
 const Rwrap = styled.div`
   background-color: #f1f1f1;
@@ -132,7 +133,7 @@ export const Result = () => {
                   <ModalBody>
                     <MbtiDuckImg>
                       <img
-                        src="https://cdn.discordapp.com/attachments/1182224641134170152/1186364861702226100/mbti_duck_img.png"
+                        src={IMG_URL + "/img/mbti_duck_img.png"}
                         alt="mbti별 오리"
                       />
                     </MbtiDuckImg>
